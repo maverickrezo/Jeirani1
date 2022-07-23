@@ -25,26 +25,46 @@ scissors = '''
 ---.__(___)
 '''
 
-#Write your code below this line 👇
+
+mylist = [rock,paper,scissors]
+myliststr = ['rock','paper','scissors']
 
 import random
 
-mylist = [rock,paper,scissors]
+yourchoice = input('What do you choose? ')
+yourindex = myliststr.index(yourchoice)
 
-compchoice = mylist[random.randint (0,2)]
+compchoice = random.randint(0,2)
+print (f'Computer chooses {myliststr[compchoice]} {mylist[compchoice]}')
 
-yourchoice = input('Choose your option: ')
+print (f'You choose {myliststr[yourindex]} {mylist[yourindex]}')
 
-print (f'computers choice is  {compchoice}')
 
-if yourchoice =='rock' and compchoice =='rock':
-    print (rock)
-    print ('Its a tie')
-elif yourchoice =='rock' and compchoice =='paper':
-    print (rock)
-    print ('You loose')
-elif yourchoice =='rock' and compchoice =='scissors':
-    print (rock)
-    print ('You win')
+
+if yourchoice == 'rock' and myliststr[compchoice] == 'rock':
+    print('Its a tie')
+elif yourchoice == 'rock' and myliststr[compchoice] == 'paper':
+    print('You loose')
+elif yourchoice == 'paper' and myliststr[compchoice] == 'rock':
+    print('You win')
+elif yourchoice == 'rock' and myliststr[compchoice] == 'scissors':
+    print('You win')
+elif yourchoice == 'scissors' and myliststr[compchoice] == 'rock':
+    print('You loose')
+    
+    
+elif yourchoice == 'paper' and myliststr[compchoice] == 'paper':
+    print('Its a tie')
+    
+elif yourchoice == 'paper' and myliststr[compchoice] == 'scissors':
+    print('You loose')
+elif yourchoice == 'scissors' and myliststr[compchoice] == 'paper':
+    print('You win')
+
+
+elif yourchoice == 'scissors' and myliststr[compchoice] == 'scissors':
+    print('Its a tie')
+    
+
 
 
